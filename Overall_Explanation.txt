@@ -1,0 +1,43 @@
+Please include a brief explanation of your design and assumptions, along with your code, as well as detailed instructions to run your application. 
+
+
+Explanation:
+==============
+
+I have used my algorithm to approach as close as possible to the Best Fit of talks (i.e. tried to accommodate as many talks as possible in a session resulting in least wastage of slots/timing in any session)
+ 
+  1. Read data from file and create a list of String.
+  2. Validate each string talk, check the time.
+  3. Sort the list of talks based on their duration.
+  4. Find the total possible number of days to schedule conference.
+  5. Find out the combination which can fill the first half (morning session total time 180 mins or less).
+  6. Find out the combination that can fill the evening sessions (180 >= totalSessionTime <= 240).At first I tried to fill all the evening sessions counting to one less than the number of morning sessions.
+  7. Check if any task is remaining in the talk_list_for_operation if yes then first try to fill all the evening sessions formed till now.
+  8. Check again if any talk is remaining in the talk_list_for_operation, if yes then now create another evening session to accommodate the remaining talks.
+  9. Check again if any talk is remaining in the talk_list_for_operation, now go on adding morning sessions and evening sessions till there are talks left.
+   
+ASSUMPTIONS :- 
+=================
+
+  1. There is no task which has time more than 240 mins(4 hrs maximum time for session).
+  2. If after scheduling the talks gets completed before 12 PM then Lunch session is not printed or the talks gets completed before 4 PM then Networking Event is not printed.
+  
+
+How to run:
+==================
+
+  1)Package name : com.my.conference.model
+  2)Main Implementation Class is ConferenceTrackManager.java
+  3)Other classes are Talk.java and InvalidTalkException.java
+  4)Please specify the path for the input file when a java project is made.
+   In my code in ConferenceTrackManager.java
+   String fileName = "C:\\Users\\abhi\\workspace\\Eclipse\\ConferenceTrackManager\\src\\com\\my\\conference\\data\\ConferenceData.txt";
+   
+   so please specify the input file name as "....\\ConferenceTrackManager\\src\\com\\my\\conference\\data\\InputFileName.txt"
+   
+   (The inputFile is visible in another package by the name com.my.conference.data in my project)
+   
+   
+Java version used
+===================
+1.7 to compile, test and run
