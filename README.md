@@ -14,7 +14,7 @@ You are planning a big programming conference and have received many proposals w
 
 Note that depending on how you choose to complete this problem, your solution may give a different ordering or combination of talks into tracks. This is acceptable; you don’t need to exactly duplicate the sample output given here.
 
-Test input:<br />
+#Test input:<br />
 Writing Fast Tests Against Enterprise Rails 60min <br />
 Overdoing it in Python 45min <br />
 Lua for the Masses 30min <br />
@@ -35,7 +35,7 @@ Ruby on Rails Legacy App Maintenance 60min <br />
 A World Without HackerNews 30min <br />
 User Interface CSS in Rails Apps 30min <br />
 
-Test output: <br />
+#Test output: <br />
 Track 1:<br />
 09:00AM Writing Fast Tests Against Enterprise Rails 60min<br />
 10:00AM Overdoing it in Python 45min<br />
